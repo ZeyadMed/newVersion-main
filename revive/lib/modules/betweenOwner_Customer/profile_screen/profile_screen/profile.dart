@@ -18,7 +18,7 @@ class Profile extends StatelessWidget {
               Container(
                 height: 220,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 90, 206, 94),
+                  // color: const Color.fromARGB(255, 90, 206, 94),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0),
@@ -30,13 +30,13 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 110, right: 15, left: 15),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 252, 248, 248),
+                      // color: Color.fromARGB(255, 252, 248, 248),
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(0),
                           topRight: Radius.circular(0)),
                       boxShadow: [
                         BoxShadow(
-                          color: Color.fromRGBO(38, 41, 37, 0.29),
+                          // color: Color.fromRGBO(38, 41, 37, 0.29),
                           blurRadius: 20,
                           offset: Offset(0, 1),
                         ),
@@ -68,7 +68,7 @@ class Profile extends StatelessWidget {
                               height: 90,
                               // width: 350,
                               decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 252, 248, 248),
+                                  // color: Color.fromARGB(255, 252, 248, 248),
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     // BoxShadow(
@@ -86,7 +86,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "30",
                                         style: TextStyle(
-                                          color: Colors.black12,
+                                          // color: Colors.black12,
                                           fontFamily: "Body",
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "Followers",
                                         style: TextStyle(
-                                          color: Colors.black54,
+                                          // color: Colors.black54,
                                           //fontFamily: "Name",
                                           fontSize: 16,
                                           //  fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "10",
                                         style: TextStyle(
-                                          color: Colors.black12,
+                                          // color: Colors.black12,
                                           fontFamily: "Body",
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -126,7 +126,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "Following",
                                         style: TextStyle(
-                                          color: Colors.black54,
+                                          // color: Colors.black54,
                                           // fontFamily: "Name",
                                           fontSize: 16,
                                           //fontWeight: FontWeight.bold,
@@ -142,7 +142,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "20",
                                         style: TextStyle(
-                                          color: Colors.black12,
+                                          // color: Colors.black12,
                                           fontFamily: "Body",
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
@@ -154,7 +154,7 @@ class Profile extends StatelessWidget {
                                       Text(
                                         "Likes",
                                         style: TextStyle(
-                                          color: Colors.black54,
+                                          // color: Colors.black54,
                                           // fontFamily: "Name",
                                           fontSize: 16,
                                           //fontWeight: FontWeight.bold,
@@ -219,7 +219,7 @@ class Profile extends StatelessWidget {
                       fontSize: 14,
                       fontFamily: "Name",
                       fontWeight: FontWeight.w800,
-                      color: Colors.black54,
+                      // color: Colors.black54,
                     ),
                   ),
                 ),

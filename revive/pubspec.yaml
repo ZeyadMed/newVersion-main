@@ -72,6 +72,7 @@ dependencies:
   syncfusion_flutter_charts: 
   path:
   image_picker:
+  provider: ^6.0.5
 
 
 dev_dependencies:

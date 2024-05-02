@@ -60,10 +60,10 @@ class _PostsState extends State<Posts> {
               Container(
                 height: 80,
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  // color: Colors.grey[100],
                   boxShadow: [
                     BoxShadow(
-                      color: Color.fromRGBO(98, 179, 72, 0.282),
+                      // color: Color.fromRGBO(98, 179, 72, 0.282),
                       blurRadius: 50,
                       //offset: Offset(0, 0),
                     ),
@@ -222,14 +222,14 @@ class _PostsState extends State<Posts> {
                         children: [
                           RichText(
                             text: TextSpan(
-                              style: TextStyle(color: Colors.black),
+                              // style: TextStyle(color: Colors.black),
                               children: [
-                                TextSpan(text: "Liked by"),
+                                TextSpan(text: "Liked by   "),
                                 TextSpan(
-                                  text: "Ziad Shalaby",
+                                  text: "Ziad Shalaby  ",
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                                TextSpan(text: "and"),
+                                TextSpan(text: "and  "),
                                 TextSpan(
                                   text: "others",
                                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -239,7 +239,7 @@ class _PostsState extends State<Posts> {
                           ),
                           RichText(
                             text: TextSpan(
-                              style: TextStyle(color: Colors.black),
+                              // style: TextStyle(color: Colors.black),
                               children: [
                                 TextSpan(
                                   text: "Said Sharaf",
@@ -258,9 +258,9 @@ class _PostsState extends State<Posts> {
                             },
                             child: Text(
                               "View all 10 comments",
-                              style: TextStyle(
-                                color: Colors.black38,
-                              ),
+                              // style: TextStyle(
+                              //   // color: Colors.black38,
+                              // ),
                             ),
                           ),
                         ],

@@ -18,7 +18,7 @@ class Settings extends StatelessWidget {
             borderRadius: BorderRadius.all(
               Radius.circular(30),
             ),
-            color: Colors.white,
+            // color: Colors.white,
           ),
           child: Row(
             children: [
@@ -39,7 +39,7 @@ class Settings extends StatelessWidget {
                   padding: EdgeInsets.only(top: 35, left: 43),
                   child: CircleAvatar(
                     radius: 12,
-                    backgroundColor: Colors.white,
+                    // backgroundColor: Colors.white,
                     child: Icon(Icons.edit,
                     color: Colors.green,
                     size: 18,

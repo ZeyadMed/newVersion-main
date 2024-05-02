@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
+import 'package:revive/consts/assets_manager.dart';
 import 'package:revive/layout/cubit/cubit.dart';
 import 'package:revive/layout/cubit/states.dart';
 import 'package:revive/modules/LoginAndReg/login.dart';
@@ -7,10 +9,10 @@ import 'package:revive/modules/Owner/FactoryFootprint/questions_factory.dart';
 import 'package:revive/modules/Owner/Report/report.dart';
 import 'package:revive/modules/betweenOwner_Customer/trash_Screen/trash_post.dart';
 import 'package:revive/modules/chat_screen/chat.dart';
+import 'package:revive/provider/theme_provider.dart';
 import 'package:revive/shared/component/component.dart';
 import 'package:revive/shared/network/local/shared_pref.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 
 class listOfslider extends StatelessWidget {
   const listOfslider({
@@ -71,6 +73,7 @@ class _headofsliderState extends State<headofslider> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return BlocProvider<NewsCubit>(
       create: (context) => NewsCubit(),
       child: BlocConsumer<NewsCubit, NewsStates>(
@@ -110,21 +113,25 @@ class _headofsliderState extends State<headofslider> {
                   ),
                 ),
 
-              sharedPref.getData(key: "role")==3? Container():SvglistOfslider(
-                  txt: "Factory Footprint",
-                  icon: "assets/icons/factory-svgrepo-com.svg",
-                  press: () {
-                    navigate(context, QuestionsFactory());
-                  },
-                ),
+                sharedPref.getData(key: "role") == 3
+                    ? Container()
+                    : SvglistOfslider(
+                        txt: "Factory Footprint",
+                        icon: "assets/icons/factory-svgrepo-com.svg",
+                        press: () {
+                          navigate(context, QuestionsFactory());
+                        },
+                      ),
 
-                sharedPref.getData(key: "role")==3? Container():SvglistOfslider(
-                  txt: "Weekly Report",
-                  icon: "assets/icons/report-svgrepo-com.svg",
-                  press: () {
-                    navigate(context, ReportScreen());
-                  },
-                ),
+                sharedPref.getData(key: "role") == 3
+                    ? Container()
+                    : SvglistOfslider(
+                        txt: "Weekly Report",
+                        icon: "assets/icons/report-svgrepo-com.svg",
+                        press: () {
+                          navigate(context, ReportScreen());
+                        },
+                      ),
                 // listOfslider(
                 //   txt: "My Posts",
                 //   icon: Icons.paste_outlined,
@@ -202,22 +209,36 @@ class _headofsliderState extends State<headofslider> {
                     navigate(context, TrashPost());
                   },
                 ),
-
-                SvglistOfslider(
-                  txt: "light mode",
-                  icon: "assets/icons/light_mode.svg",
-                  trailingWidget: Switch(
-                    onChanged: (value) {
-                      setState(() {
-                        isCheck = !isCheck;
-                      });
-                    },
-                    value: isCheck,
+                SwitchListTile(
+                  secondary: Image.asset(
+                    AssetsManager.theme,
+                    height: 30,
                   ),
-                  press: () {
-                    navigate(context, TrashPost());
+                  title: Text(
+                    themeProvider.getIsDarkTheme
+                        ? "Dark Mode"
+                        : "Light Mode",
+                  ),
+                  value: themeProvider.getIsDarkTheme,
+                  onChanged: (value) {
+                    themeProvider.setDarkTheme(themeValue: value);
                   },
                 ),
+                // SvglistOfslider(
+                //   txt: "light mode",
+                //   icon: "assets/icons/light_mode.svg",
+                //   trailingWidget: Switch(
+                //     onChanged: (value) {
+                //       setState(() {
+                //         isCheck = !isCheck;
+                //       });
+                //     },
+                //     value: isCheck,
+                //   ),
+                //   press: () {
+                //     navigate(context, TrashPost());
+                //   },
+                // ),
 
                 SvglistOfslider(
                   txt: "Chat ",
